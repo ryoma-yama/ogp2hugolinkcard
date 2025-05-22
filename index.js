@@ -26,6 +26,9 @@ if (!url) {
 
     await clipboard.write(output);
     console.log('✅ Shortcode copied to clipboard.');
+    console.log('\n----- Shortcode Output -----\n');
+    console.log(output);
+    console.log('\n---------------------------');
   } catch (err) {
     console.error('❌ Failed to fetch OGP info:', err.message);
     process.exit(1);
