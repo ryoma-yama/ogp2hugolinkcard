@@ -2,19 +2,33 @@
   "name": "ogp2shortcode",
   "version": "1.0.0",
   "type": "module",
-  "description": "",
+  "description": "A CLI tool to fetch OGP info from a URL and generate a Hugo link card shortcode, copying it to the clipboard.",
   "main": "index.js",
   "scripts": {
     "ogp": "node ogp-fetch.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "hugo",
+    "ogp",
+    "shortcode",
+    "cli",
+    "link card",
+    "clipboard"
+  ],
+  "author": "ryoma-yama",
+  "license": "Apache-2.0",
   "packageManager": "pnpm@10.8.1",
   "dependencies": {
     "axios": "^1.9.0",
     "cheerio": "^1.0.0",
     "clipboardy": "^4.0.0"
+  },
+  "bin": {
+    "ogp2shortcode": "./index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/y-ryoma/ogp2shortcode.git"
   }
 }

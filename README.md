@@ -1,30 +1,32 @@
 # ogp2shortcode
 
-Hugo（PaperModテーマ）向けのリンクカードショートコードを、指定URLからOGP情報を取得して自動生成するCLIツール。
+A CLI tool that fetches OGP information from a given URL and generates a Hugo-compatible link card shortcode. The result is automatically copied to your clipboard for easy use.
 
-## 特徴
+## Requirements
 
-* 指定URLの OGP 情報（title / description / image）を抽出
-* PaperMod に対応した `linkpreview` ショートコードを自動生成
-* 生成結果をクリップボードに直接コピー（コピペ不要）
+- Node.js 18 or higher
 
-## 使用方法
+## Features
 
-### 準備
+- Extracts OGP information (title / description / image) from the specified URL
+- Generates a `linkCard` shortcode for Hugo
+- Automatically copies the generated shortcode to your clipboard
 
-```bash
-pnpm install
-```
-
-### 実行
-
-#### シンプルな実行（ファイル名省略）
+## Installation
 
 ```bash
-pnpm ogp https://example.com
+npm install -g ogp2shortcode
 ```
 
-## 出力結果（例）
+## Usage
+
+```bash
+ogp2shortcode https://example.com
+```
+
+After execution, the shortcode will be copied to your clipboard.
+
+## Example Output
 
 ```markdown
 {{< linkCard
@@ -35,13 +37,12 @@ pnpm ogp https://example.com
 >}}
 ```
 
-## 依存
+## Dependencies
 
-* Node.js 18 以上
-* pnpm
+- [axios](https://github.com/axios/axios)
+- [cheerio](https://github.com/cheeriojs/cheerio)
+- [clipboardy](https://github.com/sindresorhus/clipboardy)
 
-## 使用ライブラリ
+## License
 
-* [axios](https://github.com/axios/axios)
-* [cheerio](https://github.com/cheeriojs/cheerio)
-* [clipboardy](https://github.com/sindresorhus/clipboardy)
+This project is licensed under the [Apache License 2.0](./LICENSE).

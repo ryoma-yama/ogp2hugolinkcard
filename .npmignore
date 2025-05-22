@@ -1,0 +1,16 @@
+# Ignore unnecessary files for npm package
+node_modules
+*.log
+logs
+coverage
+dist
+*.tgz
+.env
+.pnpm-debug.log
+.vscode
+.idea
+.DS_Store
+.git
+.gitignore
+README.md
+pnpm-lock.yaml
