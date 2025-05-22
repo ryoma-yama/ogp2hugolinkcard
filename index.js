@@ -18,9 +18,26 @@ if (!url) {
       $(`meta[property='${prop}']`).attr('content') ||
       $(`meta[name='${prop}']`).attr('content') || '';
 
-    const ogTitle = getMeta('og:title').trim();
+    // Title: og:title or <title>
+    let ogTitle = getMeta('og:title').trim();
+    if (!ogTitle) {
+      ogTitle = $('title').text().trim();
+      if (!ogTitle) {
+        console.warn('⚠️  No title found.');
+      }
+    }
+
+    // Description: og:description only, warn if missing
     const ogDesc = getMeta('og:description').trim();
+    if (!ogDesc) {
+      console.warn('⚠️  No og:description found.');
+    }
+
+    // Image: og:image only, warn if missing
     const ogImage = getMeta('og:image').trim();
+    if (!ogImage) {
+      console.warn('⚠️  No og:image found.');
+    }
 
     const output = `{{< linkCard\n    url=\"${url}\"\n    title=\"${ogTitle}\"\n    description=\"${ogDesc}\"\n    image=\"${ogImage}\"\n>}}`;
 
