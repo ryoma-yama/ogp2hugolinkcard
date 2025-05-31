@@ -43,7 +43,7 @@ function buildShortcode({ url, ogTitle, ogDesc, ogImage }) {
 async function main() {
   const url = process.argv[2];
   if (!url) {
-    console.error('Usage: ogp2shortcode <URL>');
+    console.error('Usage: ogp2hugolinkcard <URL>');
     process.exit(1);
   }
 

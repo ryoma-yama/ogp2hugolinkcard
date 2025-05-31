@@ -1,6 +1,6 @@
 {
   "name": "ogp2hugolinkcard",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "type": "module",
   "description": "A CLI tool to fetch OGP info from a URL and generate a Hugo link card shortcode, copying it to the clipboard.",
   "main": "index.js",

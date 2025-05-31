@@ -1,4 +1,4 @@
-# ogp2shortcode
+# ogp2hugolinkcard
 
 A CLI tool that fetches OGP information from a given URL and generates a Hugo-compatible link card shortcode. The result is automatically copied to your clipboard for easy use.
 
@@ -15,13 +15,13 @@ A CLI tool that fetches OGP information from a given URL and generates a Hugo-co
 ## Installation
 
 ```bash
-npm install -g ogp2shortcode
+npm install -g ogp2hugolinkcard
 ```
 
 ## Usage
 
 ```bash
-ogp2shortcode https://example.com
+ogp2hugolinkcard https://example.com
 ```
 
 After execution, the shortcode will be copied to your clipboard.
