@@ -2,6 +2,9 @@
 
 A CLI tool that fetches OGP information from a given URL and generates a Hugo-compatible link card shortcode. The result is automatically copied to your clipboard for easy use.
 
+If you prefer a browser-based tool, check out the Web version:  
+👉 [ogp2hugolinkcard-web](https://github.com/ryoma-yama/ogp2hugolinkcard-web)
+
 ## Requirements
 
 - Node.js 18 or higher
